@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimezeLegibility;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+
+  --primary: #ffffff;
+}
+
+[data-theme="light"] {
+  --primary: #000000;
+}
+
+body {
+  font-size: 1.6rem;
+  height: 100vh;
+  height: 100svh;
+
+  background: url(./assets/m-background.png);
+  background-position: center;
+  background-size: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  color: var(--primary);
+}
+
+a {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  color: var(--primary);
+}
+
+footer {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+
+main {
+  padding-top: 5.6rem;
+  max-width: 58.8rem;
+  width: 100%;
+}
+
+main header {
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+main header img {
+  width: 11.2rem;
+  height: 11.2rem;
+  object-fit: cover;
+  border-radius: 50%;
+  outline: .2rem solid rgba(255, 255, 255, 0.5);
+}
