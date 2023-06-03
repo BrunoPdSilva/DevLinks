@@ -157,6 +157,13 @@ main header img {
   transition: 300ms ease-in-out;
 }
 
+.links button:hover,
+.links button:focus-visible {
+  background: var(--surface-color-hover);
+  border: 0.15rem solid var(--text-color);
+  transition: 300ms ease-in-out;
+}
+
 .social {
   display: flex;
   justify-content: center;
@@ -168,6 +175,20 @@ main header img {
   width: 4rem;
   height: 4rem;
   cursor: pointer;
+  position: relative;
+  z-index: 9999;
+}
+
+.social li:hover::after {
+  content: "";
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+  background: var(--highlight-color);
+  position: absolute;
+  z-index: 4444;
+  top: -1.6rem;
+  left: -1.6rem;
 }
 
 .social li svg {
@@ -187,4 +208,20 @@ footer {
 footer a {
   text-decoration: underline;
   transition: 300ms ease-in-out;
+}
+
+@media (min-width: 1000px) {
+  body {
+    background: url(./assets/d-background-dark.png);
+    background-position: center;
+    background-size: cover;
+    transition: background 300ms ease-in-out;
+  }
+
+  body[data-theme="light"] {
+    background: url(./assets/d-background-light.png);
+    background-position: center;
+    background-size: cover;
+    transition: background 300ms ease-in-out;
+  }
 }
